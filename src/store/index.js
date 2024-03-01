@@ -6,6 +6,11 @@ const conuterReducer = (state = { counter: 0 }, aciton) => {
       counter: state.counter + 1,
     };
   }
+  if (aciton.type === "increase") {
+    return {
+      counter: state.counter + aciton.amount,
+    };
+  }
   if (aciton.type === "decrement")
     return {
       counter: state.counter - 1,
